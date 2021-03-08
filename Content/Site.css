@@ -1,0 +1,93 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 70px;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('../Images/goodFood.jpg');
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep conten t from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 150px;
+    height:24px;    
+    background-color: rgba(0,0,0,.5);
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+}
+.RestaurantHeadings h1 {
+    color: hsl(230,50%,80%);
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+.Dish_field {
+    margin-top: 12px;
+    height: auto;
+    width: 430px; 
+    margin-left:366px;
+    border-radius: 10px;
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left:80px;
+    border: 1px solid gray;
+}
+.GridData {
+    margin-top: 50px;
+    height: auto;
+    margin-left: 218px;
+    width: 730px;
+    font-size: 15px;
+    background-color: transparent;
+}
+.InsertBTN {
+    border: 1px solid gray;
+    border-radius: 4px;
+    height: auto;
+    font-weight:bold;
+    width: 50px;
+    font-size: 12.4px;
+    color: hsl(230,50%,75%);
+    margin-left: 289px;
+    background-color: transparent;
+}
+    .InsertBTN:hover {
+        color: hsl(200,50%,91%);
+        background-color: gray;
+    }
+.TextField {
+    border-radius: 4px;
+    color: hsl(200,30%,85%);
+    border: 1px solid #274046;
+}
+.Labels {
+    color: hsl(200,30%,85%);
+    font-size: 15px;
+}
+footer {
+    position: relative;
+    
+}
+.copyright {
+    text-align: center;
+    color: hsl(230,50%,80%);
+    font-size: 12px;
+}
+
