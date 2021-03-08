@@ -2582,36 +2582,38 @@ pre {
     }
 
     .col-md-4 {
-        border:1px solid gray;
-        background-color:transparent;
-        margin-left:12px;
-        height:auto;
-        border-radius:9px;
-        width:358px;
+        border: 1px solid gray;
+        background-color: transparent;
+        margin-left: 12px;
+        height: auto;
+        border-radius: 9px;
+        width: 358px;
     }
-    .col-md-4 h2 {
-        color:hsl(230,50%,80%);
-        font-size:21px;
-        font-family:serif;
-       
-    }
+
+        .col-md-4 h2 {
+            color: hsl(230,50%,80%);
+            font-size: 21px;
+            font-family: serif;
+        }
+
         .col-md-4 p {
             color: hsl(200,50%,90%);
-            text-align:justify;
+            text-align: justify;
             font-size: 14px;
         }
+
             .col-md-4 p a {
                 background-color: rgba(0,0,0,.5);
                 font-size: 10px;
                 color: hsl(200,50%,90%);
-                height:auto;
-                border-radius:7px;
-                width:76px;
+                height: auto;
+                border-radius: 7px;
+                width: 76px;
             }
 
-        .col-md-3 {
-            width: 25%;
-        }
+    .col-md-3 {
+        width: 25%;
+    }
 
     .col-md-2 {
         width: 16.66666667%;
@@ -5216,7 +5218,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     position: relative;
     min-height: 50px;
     margin-bottom: 20px;
-    border: 1px solid transparent;
+    background: linear-gradient(to left, gray, #274046);
+    border:none;
 }
 
 @media (min-width: 768px) {
@@ -5723,7 +5726,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     }
 
 .navbar-inverse {
-    background: linear-gradient(to left, gray, #274046);
+    background-color: #222;
+    border-color: #080808;
 }
 
     .navbar-inverse .navbar-brand {
@@ -6172,12 +6176,12 @@ a.badge:focus {
     .jumbotron h1,
     .jumbotron .h1 {
         color: hsl(200,20%,40%);
-        font-family:serif;
+        font-family: serif;
     }
 
     .jumbotron p {
         margin-bottom: 15px;
-        text-align:justify;
+        text-align: justify;
         font-size: 16.5px;
         color: hsl(200,20%,70%);
     }
@@ -6189,11 +6193,11 @@ a.badge:focus {
 .container .jumbotron,
 .container-fluid .jumbotron {
     padding-right: 15px;
-    margin-left:212PX;
-    width:750px;
-    border:1px solid #274046;
-    height:238PX;
+    margin-left: 212PX;
+    width: 755px;
+    height: 235PX;
     padding-left: 15px;
+    border: 1px solid #274046;
     border-radius: 12px;
 }
 
@@ -6216,7 +6220,7 @@ a.badge:focus {
     .jumbotron h1,
     .jumbotron .h1 {
         font-size: 35px;
-        font-weight:bold;
+        font-weight: bold;
     }
 }
 
