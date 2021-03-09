@@ -21,7 +21,6 @@ textarea {
     background-color: rgba(0,0,0,.5);
 }
 
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {
@@ -80,10 +79,6 @@ textarea {
 .Labels {
     color: hsl(200,30%,85%);
     font-size: 15px;
-}
-footer {
-    position: relative;
-    
 }
 .copyright {
     text-align: center;
