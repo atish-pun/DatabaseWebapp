@@ -6167,6 +6167,7 @@ a.badge:focus {
     padding-bottom: 30px;
     margin-bottom: 100px;
     background-color: rgba(0,0,0,.5);
+    box-shadow: 5px 10px #888888;
 }
 
     .jumbotron h1,
@@ -6189,12 +6190,12 @@ a.badge:focus {
 .container .jumbotron,
 .container-fluid .jumbotron {
     padding-right: 15px;
-    margin-left:216PX;
-    width:750px;
-    border:1px solid #274046;
-    height:238PX;
+    margin-left: 216PX;
+    width: 750px;
+    height: 238PX;
     padding-left: 15px;
     border-radius: 12px;
+    box-shadow: -25px 25px 50px;
 }
 
 .jumbotron .container {

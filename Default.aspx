@@ -13,7 +13,7 @@ dishes.</p>
         <div class="col-md-4">
             <h2>Customer</h2>
             <p>
-                Customers can order many dishes from single restaurant or can order different
+                Customers details help us to ensure that they can order many dishes from single restaurant or can order different
 dishes from different restaurants. They can even order same item. example Momo from different restaurants.
             </p>
             <p>
@@ -23,7 +23,7 @@ dishes from different restaurants. They can even order same item. example Momo f
         <div class="col-md-4">
              <h2>Location</h2>
             <p>
-                It is located at Lakeside Pokhara, Nepal.
+                It is located at Lekhnath, Arghau chowk, Pokhara, Nepal.
             </p>
         </div>
         <div class="col-md-4">

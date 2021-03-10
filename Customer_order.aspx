@@ -27,7 +27,7 @@
                 </Columns>
                 <RowStyle ForeColor="#BCC6CC" Height="27px" HorizontalAlign="Center" VerticalAlign="Middle" />
             </asp:GridView>
-            <asp:SqlDataSource ID="customerOrderData" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString6 %>" ProviderName="<%$ ConnectionStrings:ConnectionString6.ProviderName %>" SelectCommand="SELECT DETAILS_ORDER.ORDER_ID, ORDER_DISHES.DISH_CODE, DISH.DISH_NAME, ORDER_DISHES.ORDER_QUANTITY, ORDER_DISHES.LINE_TOTAL, DELIVERY_ADDRESS.DELIVERY_LOCATION FROM DETAILS_ORDER, ORDER_DISHES, DISH, DELIVERY_ADDRESS WHERE DETAILS_ORDER.ORDER_ID = ORDER_DISHES.ORDER_ID AND ORDER_DISHES.DISH_CODE = DISH.DISH_CODE AND DETAILS_ORDER.DELIVERY_ID = DELIVERY_ADDRESS.DELIVERY_ID AND (DETAILS_ORDER.CUSTOMER_ID = :DropDownListCusName)">
+            <asp:SqlDataSource ID="customerOrderData" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString5 %>" ProviderName="<%$ ConnectionStrings:ConnectionString5.ProviderName %>" SelectCommand="SELECT DETAILS_ORDER.ORDER_ID, ORDER_DISHES.DISH_CODE, DISH.DISH_NAME, ORDER_DISHES.ORDER_QUANTITY, ORDER_DISHES.LINE_TOTAL, DELIVERY_ADDRESS.DELIVERY_LOCATION FROM DETAILS_ORDER, ORDER_DISHES, DISH, DELIVERY_ADDRESS WHERE DETAILS_ORDER.ORDER_ID = ORDER_DISHES.ORDER_ID AND ORDER_DISHES.DISH_CODE = DISH.DISH_CODE AND DETAILS_ORDER.DELIVERY_ID = DELIVERY_ADDRESS.DELIVERY_ID AND (DETAILS_ORDER.CUSTOMER_ID = :DropDownListCusName)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="DropDownListCusName" Name="DropDownListCusName" PropertyName="SelectedValue" />
                 </SelectParameters>

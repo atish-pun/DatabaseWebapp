@@ -13,5 +13,10 @@ namespace DatabaseCW
         {
 
         }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cusIdtxt.Text = DropDownListCusName.SelectedItem.Value;
+        }
     }
 }
