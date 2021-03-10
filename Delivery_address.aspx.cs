@@ -22,8 +22,12 @@ namespace DatabaseCW
                 String deliveryid = didTXT.Text;
                 String deliverylocation = dlocationTXT.Text;
                 String deliverytime = dtimeTXT.Text;
+                String deliverylongitude = lonTXT.Text;
+                String deliverylatitude = latTXT.Text;
                 deliveryid = deliveryid.Trim();
                 deliverylocation = deliverylocation.Trim();
+                deliverylongitude = deliverylongitude.Trim();
+                deliverylatitude = deliverylatitude.Trim();
                 deliverytime = deliverytime.Trim();
 
                 if (deliveryid == "")
@@ -45,7 +49,7 @@ namespace DatabaseCW
                         int deliverycharge = int.Parse(dchargeTXT.Text);
                         OracleConnection deliveryconnection = new OracleConnection("Data Source = ATU; User ID = lal_kumar_pun; password = lal; Unicode=True");
                         deliveryconnection.Open();
-                        String query = "INSERT into DELIVERY_ADDRESS values('" + deliveryid + "','" + deliverylocation + "','" + deliverytime + "','" + deliverycharge + "')";
+                        String query = "INSERT into DELIVERY_ADDRESS values('" + deliveryid + "','" + deliverylocation + "','" + deliverytime + "','" + deliverycharge + "','" + deliverylongitude + "','" + deliverylatitude + "')";
                         OracleCommand cmd = new OracleCommand(query, deliveryconnection);
                         cmd.ExecuteNonQuery();
                         deliveryconnection.Close();
@@ -54,6 +58,8 @@ namespace DatabaseCW
                         dlocationTXT.Text = "";
                         dtimeTXT.Text = "";
                         dchargeTXT.Text = "";
+                        lonTXT.Text = "";
+                        latTXT.Text = "";
                    
                     }
                     catch (FormatException)

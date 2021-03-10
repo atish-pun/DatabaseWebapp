@@ -51,6 +51,42 @@ namespace DatabaseCW
         protected global::System.Web.UI.WebControls.TextBox dlocationTXT;
 
         /// <summary>
+        /// Longitude control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Longitude;
+
+        /// <summary>
+        /// lonTXT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox lonTXT;
+
+        /// <summary>
+        /// Latitude control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Latitude;
+
+        /// <summary>
+        /// latTXT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox latTXT;
+
+        /// <summary>
         /// dtime control.
         /// </summary>
         /// <remarks>
