@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace DatabaseCW
 {
@@ -18,7 +19,9 @@ namespace DatabaseCW
         [Obsolete]
         protected void InsertBTN_Click(object sender, EventArgs e)
         {
-            
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                DialogResult result;
+                String warning = "Error";
                 String deliveryid = didTXT.Text;
                 String deliverylocation = dlocationTXT.Text;
                 String deliverytime = dtimeTXT.Text;
@@ -32,15 +35,15 @@ namespace DatabaseCW
 
                 if (deliveryid == "")
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Delivery Id Required!!" + "');", true);
+                result = MessageBox.Show("Delivery Id Required!!", warning, buttons);
                 }
                 else if (deliverylocation == "")
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Delivery Location Required!!" + "');", true);
+                result = MessageBox.Show("Delivery Location Required!!", warning, buttons);
                 }
                 else if (deliverytime == "")
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Delivery Time Required!!" + "');", true);
+                result = MessageBox.Show("Delivery Time Required!!", warning, buttons);
                 }
               
                 else
@@ -64,11 +67,11 @@ namespace DatabaseCW
                     }
                     catch (FormatException)
                     {
-                    ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Wrong input format for Delivery Charge" + "');", true);
+                    result = MessageBox.Show("Wrong input format for Delivery Charge", warning, buttons);
                 }
                     catch (Exception ex)
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + ex.Message + "');", true);
+                    result = MessageBox.Show(ex.Message, warning, buttons);
                     }
 
                 }         

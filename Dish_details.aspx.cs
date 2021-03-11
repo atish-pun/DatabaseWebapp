@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.OracleClient;
+using System.Windows.Forms;
 
 namespace DatabaseCW
 {
@@ -15,15 +16,12 @@ namespace DatabaseCW
 
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         [Obsolete]
         protected void InsertBTN_Click(object sender, EventArgs e)
         {
-
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+            String warning = "Error";
             String dishCode = Dish_codeTXT.Text;
             String dishName = Dish_nameTXT.Text;
             String dishLocal = Local_nameTXT.Text;
@@ -33,11 +31,11 @@ namespace DatabaseCW
 
             if (dishCode == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Dish Code Required!!" + "');", true);
+                result = MessageBox.Show("Dish Code Required!!", warning, buttons);
             }
             else if (dishName == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Dish Name Required!!" + "');", true);
+                result = MessageBox.Show("Dish Name Required!!", warning, buttons);
             }
             else
             {
@@ -59,11 +57,11 @@ namespace DatabaseCW
                 }
                 catch (FormatException)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Invalid Dish rate!! Please enter valid Price" + "');", true);
+                    result = MessageBox.Show("Invalid Dish rate!! Please enter valid Price", warning, buttons);
                 }
                 catch (Exception ex)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + ex.Message + "');", true);
+                    result = MessageBox.Show(ex.Message, warning, buttons);
                 }
             }
         }

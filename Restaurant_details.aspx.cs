@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace DatabaseCW
 {
@@ -18,7 +19,9 @@ namespace DatabaseCW
         [Obsolete]
         protected void InsertBTN_Click(object sender, EventArgs e)
         {
-          
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+            String warning = "Error";
             String restaurantId = RidTXT.Text;
             String restaurantName = RnameTXT.Text;
             String restaurantAddress = RaddressTXT.Text;
@@ -30,19 +33,19 @@ namespace DatabaseCW
 
             if (restaurantId == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Restaurant Id Required!!" + "');", true);
+                result = MessageBox.Show("Restaurant Id Required!!", warning, buttons);
             }
             else if (restaurantName == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Restaurant Name Required!!" + "');", true);
+                result = MessageBox.Show("Restaurant Name Required!!", warning, buttons);
             }
             else if (restaurantAddress == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Restaurant Address Required!!" + "');", true);
+                result = MessageBox.Show("Restaurant Address Required!!", warning, buttons);
             }
             else if (restaurantOwner == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Restaurant Owner name Required!!" + "');", true);
+                result = MessageBox.Show("Restaurant Owner name Required!!", warning, buttons);
             }
             else
             {
@@ -64,11 +67,11 @@ namespace DatabaseCW
                 }
                 catch (FormatException)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Invalid Phone number!! Please enter valid number" + "');", true);
+                    result = MessageBox.Show("Invalid Phone number!! Please enter valid number", warning, buttons);
                 }
                 catch (Exception ex)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + ex.Message + "');", true);
+                    result = MessageBox.Show(ex.Message, warning, buttons);
                 }
             }
         }

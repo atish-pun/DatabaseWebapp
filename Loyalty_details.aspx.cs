@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace DatabaseCW
 {
@@ -18,6 +19,9 @@ namespace DatabaseCW
         [Obsolete]
         protected void Insertbtn_Click(object sender, EventArgs e)
         {
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+            String warning = "Error";
             String LoyaltyId = LidTXT.Text;
             String LoyaltyDiscription = LdescriptionTXT.Text;
             String Dishcode = DishcodeDropDown.Text;
@@ -29,15 +33,15 @@ namespace DatabaseCW
 
             if (LoyaltyId == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Loyalty Id Required!!" + "');", true);
+                result = MessageBox.Show("Loyalty Id Required!!", warning, buttons);
             }
             else if (Dishcode == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Dishcode Required!!" + "');", true);
+                result = MessageBox.Show("Dishcode Required!!", warning, buttons);
             }
             else if (RestaurantId == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "RestaurantId Required!!" + "');", true);
+                result = MessageBox.Show("RestaurantId Required!!", warning, buttons);
             }
             else
             {
@@ -60,11 +64,11 @@ namespace DatabaseCW
                 }
                 catch (FormatException)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Invalid Loyalty score!! Please enter valid number" + "');", true);
+                    result = MessageBox.Show("Invalid Loyalty score!! Please enter valid number", warning, buttons);
                 }
                 catch (Exception ex)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + ex.Message + "');", true);
+                    result = MessageBox.Show(ex.Message, warning, buttons);
                 }
             }
         }

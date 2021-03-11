@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace DatabaseCW
 {
@@ -18,7 +19,9 @@ namespace DatabaseCW
         [Obsolete]
         protected void InsertBTN_Click(object sender, EventArgs e)
         {
-
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+            String warning = "Error";
             String customerId = CidTXT.Text;
             String customerName = CnameTXT.Text;
             String customerAge = CageTXT.Text;
@@ -31,15 +34,15 @@ namespace DatabaseCW
 
             if (customerId == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Customer Id Required!!" + "');", true);
+                result = MessageBox.Show("Customer Id Required!!", warning, buttons);
             }
             else if (customerName == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Customer Name Required!!" + "');", true);
+                result = MessageBox.Show("Customer Name Required!!", warning, buttons);
             }
             else if (customerGender == "")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Customer Gender Required!!" + "');", true);
+                result = MessageBox.Show("Customer Gender Required!!", warning, buttons);
             }
             else
             {
@@ -63,11 +66,11 @@ namespace DatabaseCW
                 }
                 catch (FormatException)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + "Invalid Phone number!! Please enter valid number" + "');", true);
+                    result = MessageBox.Show("Invalid Phone number!! Please enter valid number", warning, buttons);
                 }
                 catch (Exception ex)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "Alter", "alert('" + ex.Message + "');", true);
+                    result = MessageBox.Show(ex.Message, warning, buttons);
                 }
             }
         }
